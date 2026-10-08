@@ -1,0 +1,13 @@
+3. Yönlendirici ve Güvenlik Duvarı Yapılandırması
+ISS modeminin güvenlik duvarı özelliğinin olmaması ve NAT tablosunun en fazla 4
+bilgisayardan gelen istekleri işleyebilmesi nedeniyle , yerel ağ ile modem arasına Debian
+v13.4.0 tabanlı yazılımsal bir router ve firewall konumlandırılmıştır.
+● IP Yönlendirme (IP Forwarding): İki farklı ağ segmentinin birbiriyle
+haberleşebilmesi için Linux çekirdeğinde net.ipv4.ip_forward=1 parametresi aktif
+edilmiştir. Bu sayede enp0s8 (LAN) ve enp0s9 (WLAN) arayüzleri arasında paket
+geçişi sağlanmıştır.
+● nftables ve NAT Çözümü: Paket filtreleme ve ağ güvenliği için yerleşik nftables
+altyapısı kullanılmıştır. Modemin 4 cihazlık sınırını aşmak amacıyla iç ağdan gelen
+tüm istekler dış bacak (enp0s3) üzerinde maskelenmiştir (IP Masquerading).
+Kablosuz ağ segmenti de bu mekanizma üzerinden NAT dönüşümüyle kablolu ağ
+geçidine bağlanmıştır.
