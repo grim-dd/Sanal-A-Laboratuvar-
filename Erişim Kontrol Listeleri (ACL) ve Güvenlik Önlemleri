@@ -1,0 +1,13 @@
+6. Erişim Kontrol Listeleri (ACL) ve Güvenlik Önlemleri
+Ağ güvenliğini sağlamak ve segmentler arası yetkisiz geçişleri engellemek amacıyla firewall
+ve servis düzeyinde erişim kontrol listeleri (ACL) uygulanmıştır.
+● WLAN - LAN İzolasyonu: Kablosuz ağdan (172.16.0.0/24) gelen cihazların
+kablolu ağdaki (192.168.10.0/24) sunucuların yönetim arayüzlerine (SSH vb.)
+erişimi engellenmiştir. İstemciler sadece izin verilen temel servislere (DNS, Samba)
+erişebilir.
+● Yedekleme Güvenliği: Yedekleme sunucusuna (192.168.10.4) yapılacak SSH
+bağlantıları, sadece Dosya Sunucusunun statik IP adresi (192.168.10.78) ile
+sınırlandırılmıştır. Diğer tüm cihazlardan gelen talepler doğrudan reddedilir.
+● Cihaz Kısıtlaması: RADIUS protokolü (FreeRADIUS) vasıtasıyla kablosuz ağa
+yalnızca veritabanında tanımlı kullanıcı adı ve şifreye sahip cihazların katılması
+sağlanarak cihaz kısıtlaması zorunluluğu karşılanmıştır.
