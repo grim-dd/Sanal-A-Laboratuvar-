@@ -1,0 +1,21 @@
+1.1. Mevcut Durum :
+● Ofis toplam 136m2 alana sahiptir bunlar; 9 m2’lik 4 adet, 14 m2’lik 1 adet, 19 m2’lik 1
+adet ofis odası, 23 m2’lik toplantı odası, 5 m2’lik mutfak, 3,5 ve 6 m2’lik tuvalet ve 20
+m2’lik hol’den oluşmaktadır.
+● Ofiste toplam 8 adet bilgisayar ve 1 adet yazıcı bulunmaktadır.
+● ISS tarafından temin edilen modem haricinde ağ altyapısına ait hiçbir ekipman ve
+çalışma yoktur.
+1.2. Yapılacak İşlemler :
+● Kablosuz(LAN) ve Kablolu(WLAN) olmak üzere iki ağ kurulacak.
+● Kurulacak olan iki ağ birbirinden ayrı olarak tasarlanacak fakat, iki ağ üzerinden de
+sunucu servislerine erişim sağlanabilecek.
+● İnternet erişimi için ISS tarafından verilen modem/router kullanılacak.
+● Yerel ağdaki kullanıcıların DNS, DHCP, Dosya Sunucusu, Kablosuz Ağ, Yedekleme
+Sunucusu ve Ağ Yazıcısına erişimi radius protokolü ile kontrol edilecek.
+● DNS, DHCP, Dosya Sunucusu, Yedekleme Sunucusu, Ağ Yazıcısı için
+debian(GNU/Linux v13.4.0) üstünde yazılımsal çözümler uygulanacak.
+● Bilgisayarlar ve Yazıcı için 24 portluk switch temin edilecek ve kurulumu yapılacaktır.
+● Gerekli olan yapısal kablolama işlemleri UTP CAT6 kablo kullanılarak yapılacaktır.
+● IP yapılandırma işlemleri tamamlanacaktır.
+● Yazıcı yazılımsal çözüm ile ağ yazıcısı yapılacaktır.
+● Yapılan işlemler test edilerek kontrolü sağlanacaktır.
