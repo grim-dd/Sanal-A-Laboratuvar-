@@ -1,0 +1,25 @@
+8. Sistem Doğrulama ve Test Sonuçları
+Sanal laboratuvar ortamında kurulan ağ altyapısının ve açık kaynaklı servislerin işlevselliğini
+doğrulamak amacıyla yapılan testler ve sonuçları aşağıda listelenmiştir.
+8.1. İstemci IP Adresi Dağıtım Testi: Kablolu ağ segmentinde yer alan
+Ofis_Client isimli test bilgisayarında ip addr komutu çalıştırılmıştır. Cihazın,
+merkezi dnsmasq sunucusundan dinamik olarak 192.168.10.98/24 IP adresini
+başarıyla aldığı doğrulanmıştır.
+● 8.2. İnternet Erişimi, DNS ve NAT Doğrulaması: İstemci bilgisayar üzerinden dış
+ağdaki google.com adresine ICMP (ping) istekleri gönderilmiştir. Paketlerin yerel
+DNS tarafından başarıyla çözüldüğü, yazılımsal router üzerindeki nftables NAT
+mekanizması vasıtasıyla dış dünyaya maskelenerek (0% paket kaybı ile) ulaştığı teyit
+edilmiştir.
+● 8.3. Dosya Sunucusu Erişim ve Kimlik Doğrulama Testi: İstemci makineden,
+Samba dosya sunucusunun statik IP adresine (192.168.10.78) ağ üzerinden
+erişim talep edilmiştir. Sistemin kurumsal güvenlik kurallarına uygun olarak kullanıcı
+adı ve parola doğrulama ekranını başarıyla tetiklediği görülmüştür.
+● 8.4. Paylaşımlı Klasör ve Veri Yazma Doğrulaması: Kimlik doğrulama aşamasının
+ardından, dosya sunucusu üzerinde personele tahsis edilen ortak_dosyalar
+klasörüne başarıyla girilmiş; içerisindeki Deneme ve Ofis Planları dizinlerine tam
+yetkiyle erişim sağlandığı raporlanmıştır.
+● 8.5. Yedeklenen Verilerin Hedef Sunucuda Kontrolü: yedeklemesunucusu
+makinesinin terminalinde ls /srv/yedekler/dosya_sunucusu/ortak_alan
+komutu koşturulmuştur. Dosya sunucusundan çekilen Deneme ve Ofis Planları
+klasörlerinin güvenli depolama dizinine eksiksiz ve veri kaybı olmadan yazıldığı
+fiziksel olarak doğrulanmıştır.
