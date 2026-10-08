@@ -1,0 +1,20 @@
+4. Dosya, Yedekleme Sunucusu ve Ağ Yazıcısı Yapılandırması
+Ofis içi iş birliğini sağlamak, kurumsal verileri korumak ve donanım kaynaklarını
+ortaklaştırmak amacıyla Debian üzerinde dosya, yedekleme ve yazıcı servisleri
+yapılandırılmıştır.
+● Dosya Sunucusu Yapılandırması (Samba): Yerel ağda ortak dosya paylaşımı
+amacına yönelik olarak Windows ve Linux sistemlerle tam uyumlu çalışan Samba
+servisi kurulmuştur. Sunucu üzerinde /srv/samba/ortak_alan fiziksel dizini
+oluşturularak tüm personelin okuma ve yazma yapabileceği merkezi bir depolama
+havuzu haline getirilmiştir.
+● Yedekleme Sunucusu Yapılandırması (Rsync & Cron): Olası veri kayıplarının
+önüne geçmek ve veri yedeklemelerini düzenli yürütmek amacıyla müstakil bir
+yedekleme sunucusu kurgulanmıştır. Dosya sunucusu ile yedekleme sunucusu
+arasında SSH anahtar tabanlı şifresiz güven ilişkisi kurulmuş; rsync komutu sistem
+zamanlayıcısına (cron) eklenerek her gece saat 03:00'te otomatik artımlı yedekleme
+senaryosu aktif edilmiştir.
+● Yazılımsal Ağ Yazıcısı Çözümü (CUPS): Ofis bünyesindeki normal bir yerel
+yazıcıyı, ek bir donanım maliyeti oluşturmadan ağ yazıcısına dönüştürmek amacıyla
+CUPS (Common UNIX Printing System) yazılımı tercih edilmiştir. Bu yazılımsal
+çözüm sayesinde yerel yazıcı, ağ protokolleri üzerinden tüm kablolu ve kablosuz
+istemcilerin paylaşımlı olarak erişebileceği bir ağ yazıcısı rolüne kavuşturulmuştur.
