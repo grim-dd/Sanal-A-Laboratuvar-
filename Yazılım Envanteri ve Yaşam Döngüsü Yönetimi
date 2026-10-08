@@ -1,0 +1,18 @@
+7. Yazılım Envanteri ve Yaşam Döngüsü Yönetimi
+Ağ altyapısının kararlılığını ve sürdürülebilirliğini sağlamak amacıyla kullanılan açık kaynaklı
+yazılımlar, donanım seçim kriterleri ve aktif cihaz yaşam döngüleri (lifecycle) belirli
+standartlara bağlanmıştır.
+● Yazılım Envanteri ve Yama Politikası: Altyapıda Debian GNU/Linux v13.4.0
+üzerinde dnsmasq (v2.90), FreeRADIUS (v3.0.x), Samba (v4.19.x) ve CUPS
+çözümleri konumlandırılmıştır. Kritik yamalar ve güvenlik açıkları resmi forumlar
+üzerinden takip edilmekte, iş akışını kesmemek adına mesai saatleri dışında test
+edilerek sisteme uygulanmaktadır.
+● Donanım Seçim Kriterleri: Yazılımsal sunucu servislerinin 7/24 kararlı çalışabilmesi
+amacıyla; sunucu donanımlarında hata düzeltmeli (ECC) RAM mimarisi, yüksek veri
+trafiğine uygun diskler ve donanımsal arızalara karşı RAID yedeklilik yapılandırması
+temel seçim kriterleri olarak belirlenmiştir.
+● Cihaz Yaşam Döngüsü (Lifecycle) Kılavuzu: Ağda kullanılan aktif switch ve erişim
+noktalarının (AP) üretici tarafından belirlenen EoL (End-of-Life) ve EoSS
+(End-of-Software-Support) tarihleri takip edilmektedir. Yazılım ve yama desteği sona
+eren cihazların ağ genelinde güvenlik zafiyeti oluşturmaması adına, belirlenen
+politikalar dahilinde yenileriyle değiştirilmesi planlanmıştır.
