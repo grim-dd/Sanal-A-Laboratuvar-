@@ -1,0 +1,41 @@
+5. Altyapı Dokümantasyonu
+5.1. Kablo Etiket Sözlüğü
+Etiket Serisi Kullanım Amacı Kablo Tipi
+LAN-PC-[01-08] Masaüstü Bilgisayar Veri Hatları Cat6 UTP
+LAN-PRN-01 Paylaşımlı Ağ Yazıcısı Hattı Cat6 UTP
+LAN-SRV-[00-03] Sunucu Kabinet İçi Bağlantılar Cat6 UTP
+WLAN-AP-[01-02] Kablosuz Erişim Noktası Hatları Cat6 UTP
+5.2. Kablo Bağlantı Kataloğu
+Kablo Etiketi Kaynak Noktası (Cihaz) Switch Port No
+LAN-SRV-00 Kenar Yönlendirici (LAN - enp0s8) Port 1
+LAN-SRV-01 DNS / DHCP Sunucusu Port 2
+LAN-SRV-02 Dosya Sunucusu (Samba) Port 3
+LAN-SRV-03 Yedekleme Sunucusu Port 4
+LAN-PC-01 Ofis Odası 1 - PC-1 Port 5
+LAN-PC-02 Ofis Odası 2 - PC-2 Port 6
+LAN-PC-03 Ofis Odası 3 - PC-3 Port 7
+LAN-PC-04 Ofis Odası 4 - PC-4 Port 8
+LAN-PC-05 Ofis Odası 5 - PC-5 Port 9
+LAN-PC-06 Ofis Odası 5 - PC-6 Port 10
+LAN-PC-07 Ofis Odası 5 - PC-7 Port 11
+LAN-PC-08 Ofis Odası 6 - PC-8 Port 12
+LAN-PRN-01 Ofis Odası 2 - CUPS Yazıcı Port 13
+WLAN-AP-01 Merkez Hol - AP-1 Port 23
+WLAN-AP-02 Toplantı Odası - AP-2 Port 24
+5.3. Switch ARP Tablosu
+IP Adresi MAC Adresi Switch Port No Tür
+192.168.10.1 08:00:27:bc:11:a2 Port 1 Statik
+192.168.10.2 08:00:27:fa:44:c1 Port 2 Statik
+192.168.10.78 08:00:27:d3:88:e4 Port 3 Statik
+192.168.10.4 08:00:27:e2:11:f9 Port 4 Statik
+192.168.10.50 08:00:27:aa:11:01 Port 5 Dinamik
+192.168.10.51 08:00:27:aa:11:02 Port 6 Dinamik
+192.168.10.52 08:00:27:aa:11:03 Port 7 Dinamik
+192.168.10.53 08:00:27:aa:11:04 Port 8 Dinamik
+192.168.10.54 08:00:27:aa:11:05 Port 9 Dinamik
+192.168.10.55 08:00:27:aa:11:06 Port 10 Dinamik
+192.168.10.56 08:00:27:aa:11:07 Port 11 Dinamik
+192.168.10.57 08:00:27:aa:11:08 Port 12 Dinamik
+192.168.10.58 08:00:27:bb:22:01 Port 13 Dinamik
+192.168.10.23 08:00:27:cc:33:01 Port 23 Statik
+192.168.10.24 08:00:27:cc:33:02 Port 24 Statik
