@@ -1,0 +1,31 @@
+2. MANTIKSAL AĞ TASARIMI
+Sistem mimarisinde güvenlik ve trafik yalıtımı sağlamak amacıyla ağ, mantıksal olarak iki
+farklı yayın alanına bölünmüştür. Yazılımsal çözüm olarak dnsmasq kullanılmıştır.
+2.1. Kablolu Ağ (LAN) Yapılandırması
+Ofis içerisindeki bilgisayarların ve ağ yazıcısının kararlı, yüksek hızlı ve izole bir şekilde
+haberleşmesi amacıyla kablolu yerel alan ağı yapılandırması gerçekleştirilmiştir. Bu
+segment, kritik sunucu servislerini de bünyesinde barındıran ana omurgayı oluşturmaktadır.
+● Altyapı İşletim Sistemi: Debian GNU/Linux v13.4.0
+● Kullanılan Yazılımsal Çözüm: dnsmasq (Merkezi DHCP adresi dağıtımı ve yerel
+DNS isim çözümlemesi bu servis üzerinden yürütülmektedir)
+● Ağ Arayüzü (Interface): enp0s8
+Temel Ağ Parametreleri ve Adresleme Protokolü:
+● Ağ Kimliği (Subnet): 192.168.10.0/24
+● Ağ Geçidi (Gateway): 192.168.10.1
+● Alt Ağ Maskesi (Netmask): 255.255.255.0
+● Adres Dağıtım (DHCP) Havuzu: 192.168.10.50 - 192.168.10.150
+2.2. Kablosuz Ağ (WLAN) Yapılandırması
+Ofis içerisindeki ortak alanlarda ve toplantı odalarında mobil cihazların ağa erişebilmesi
+amacıyla kablosuz yerel alan ağı (WLAN) yapılandırması gerçekleştirilmiştir. Bu segment,
+kurumsal güvenlik gerekçesiyle kablolu ağdan mantıksal olarak ayrı tasarlanmıştır.
+● Altyapı İşletim Sistemi: Debian GNU/Linux v13.4.0
+● Kullanılan Yazılımsal Çözümler:
+○ dnsmasq (Kablosuz istemcilere dinamik IP dağıtımı için)
+○ FreeRADIUS (RADIUS protokolü ile kullanıcı adı ve şifre tabanlı kimlik
+doğrulama ve cihaz kısıtlaması için)
+● Ağ Arayüzü (Interface): enp0s9
+Temel Ağ Parametreleri ve Adresleme Protokolü:
+● Ağ Kimliği (Subnet): 172.16.0.0/24
+● Ağ Geçidi (Gateway): 172.16.0.1
+● Alt Ağ Maskesi (Netmask): 255.255.255.0
+● Adres Dağıtım (DHCP) Havuzu: 172.16.0.50 - 172.16.0.150
